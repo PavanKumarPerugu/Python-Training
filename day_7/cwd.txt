@@ -1,0 +1,94 @@
+Ah, now we’re getting to the core concept — understanding **Current Working Directory (CWD)** is key to avoiding file path headaches in Python. Let me explain clearly.
+
+---
+
+### 1️⃣ What is the Current Working Directory (CWD)?
+
+The **current working directory** is **the folder where Python “thinks it is” when it runs your program**.
+
+* Python uses CWD as the **default location to look for files** when you do something like:
+
+```python
+open("data.txt", "r")
+```
+
+* If the file is **not in the CWD**, Python will raise `FileNotFoundError`, even if it exists elsewhere.
+
+---
+
+### 2️⃣ How CWD is determined
+
+* **If you run Python from the terminal**, the CWD is **the folder you are in** when you run it:
+
+```powershell
+# I'm in E:\Pavan Python Codecamp
+python day_7\reading.py
+```
+
+* Here:
+
+  * **CWD** → `E:\Pavan Python Codecamp`
+  * **Script path** → `E:\Pavan Python Codecamp\day_7\reading.py`
+* So `open("data.txt")` looks for:
+
+```
+E:\Pavan Python Codecamp\data.txt
+```
+
+…not in `day_7`.
+
+---
+
+* **If you run Python by double-clicking the script** in Explorer, the CWD is usually your **user folder**, like:
+
+```
+C:\Users\<YourName>
+```
+
+…so Python would look there for files.
+
+* **If you run Python from an IDE (VS Code, PyCharm)**, the CWD is often set by the IDE — sometimes it’s the project root, not the script folder.
+
+---
+
+### 3️⃣ How CWD differs from the script folder
+
+| Concept                                         | What it means                             | Example in your case             |
+| ----------------------------------------------- | ----------------------------------------- | -------------------------------- |
+| **CWD** (`os.getcwd()`)                         | Where Python “looks for files” by default | `E:\Pavan Python Codecamp`       |
+| **Script folder** (`os.path.dirname(__file__)`) | Where the Python script actually lives    | `E:\Pavan Python Codecamp\day_7` |
+
+💡 So even if `data.txt` is next to the script, Python won’t find it if you only use `"data.txt"` and the CWD is different.
+
+---
+
+### 4️⃣ How to safely open files in the script’s folder
+
+```python
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))  # Script folder
+file_path = os.path.join(script_dir, "data.txt")         # Full path
+
+with open(file_path, "r") as file:
+    content = file.read()
+    print(content)
+```
+
+* This **doesn’t care what the CWD is**, it will always find files relative to the script.
+
+---
+
+### 5️⃣ Quick analogy
+
+* **CWD** → “Where I’m standing right now”
+* **Script folder** → “Where my house is located”
+* `open("data.txt")` → “Look for the mailbox where I’m standing, not in the house”
+
+That’s why Python runs your script fine (it knows where the house is), but can’t find `data.txt` unless you point it to the house (script folder) or move to the right location (change CWD).
+
+---
+
+If you want, I can draw a **tiny visual diagram showing CWD vs script folder vs files** — it makes this concept instantly clear.
+
+Do you want me to make that?

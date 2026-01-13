@@ -1,0 +1,1 @@
+This is a dummy .js file named smsavoyl.js
