@@ -14,6 +14,11 @@ Use a generator to stream large log files line-by-line
 Add color-coded terminal output for INFO, WARNING, ERROR
 
 '''
+import os
+
+# File path
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, "system_log.txt")
 
 def analyze_log(filename):
     try:
@@ -39,4 +44,4 @@ def analyze_log(filename):
         print(f"Unexpected error: {e}")
 
 # --- Test it ---
-analyze_log("system_log.txt")
+analyze_log(file_path)
