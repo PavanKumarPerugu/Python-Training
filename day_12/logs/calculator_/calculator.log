@@ -1,0 +1,15 @@
+2026-01-22 21:09:46,503 - INFO - Calculator started.
+2026-01-22 21:09:55,182 - INFO - Performed addition: 10.0 + 20.0 = 30.0
+2026-01-22 21:10:10,302 - INFO - Performed subtraction: 50.0 - 25.0 = 25.0
+2026-01-22 21:10:16,766 - INFO - Performed multiplication: 25.0 * 3.0 = 75.0
+2026-01-22 21:10:24,782 - INFO - Performed division: 50.0 / 2.0 = 25.0
+2026-01-22 21:10:44,942 - WARNING - Invalid menu choice entered.
+2026-01-22 21:11:58,429 - WARNING - Invalid input: non-integer menu choice.
+2026-01-22 21:12:26,909 - ERROR - Error occurred during operation:
+Traceback (most recent call last):
+  File "c:\Users\pavankumarp\Desktop\Python Training\day_12\logs\calculator_\main.py", line 66, in calculator
+    result = divide(a, b)
+  File "c:\Users\pavankumarp\Desktop\Python Training\day_12\logs\calculator_\operations_\division_.py", line 3, in divide
+    raise ValueError("Cannot divide by zero")
+ValueError: Cannot divide by zero
+2026-01-22 21:12:29,069 - INFO - Calculator exited by user.
