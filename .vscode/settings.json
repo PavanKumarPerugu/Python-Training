@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./day_12/logs/calculator_"
+    ]
+}
