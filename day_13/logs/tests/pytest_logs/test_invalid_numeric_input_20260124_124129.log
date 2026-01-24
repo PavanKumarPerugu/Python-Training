@@ -1,0 +1,4 @@
+2026-01-24 12:41:29,078 - INFO - Calculator started.
+2026-01-24 12:41:29,079 - ERROR - Invalid numeric input provided.
+2026-01-24 12:41:29,079 - INFO - Performed multiplication: 5.0 * 2.0 = 10.0
+2026-01-24 12:41:29,080 - INFO - Calculator exited by user.

@@ -1,0 +1,3 @@
+2026-01-24 12:39:20,263 - INFO - Calculator started.
+2026-01-24 12:39:20,264 - WARNING - Invalid input: non-integer menu choice.
+2026-01-24 12:39:20,265 - INFO - Calculator exited by user.

@@ -1,0 +1,9 @@
+2026-01-24 12:39:20,230 - INFO - Calculator started.
+2026-01-24 12:39:20,231 - ERROR - Error occurred during operation:
+Traceback (most recent call last):
+  File "C:\Users\pavankumarp\Desktop\Python Training\day_13\logs\calculator_\main.py", line 66, in calculator
+    result = divide(a, b)
+  File "C:\Users\pavankumarp\Desktop\Python Training\day_13\logs\calculator_\operations_\division_.py", line 3, in divide
+    raise ValueError("Cannot divide by zero")
+ValueError: Cannot divide by zero
+2026-01-24 12:39:20,237 - INFO - Calculator exited by user.
