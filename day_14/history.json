@@ -1,0 +1,50 @@
+[
+    {
+        "timestamp": "2026-01-29 11:39:31",
+        "operation": "addition",
+        "a": 10.0,
+        "b": 10.0,
+        "result": 20.0,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-01-29 11:39:46",
+        "operation": "subtraction",
+        "a": 20.0,
+        "b": 10.0,
+        "result": 10.0,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-01-29 11:40:04",
+        "operation": "multiplication",
+        "a": 10.0,
+        "b": 10.0,
+        "result": 100.0,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-01-29 11:40:18",
+        "operation": "division",
+        "a": 10.0,
+        "b": 5.0,
+        "result": 2.0,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-01-29 11:43:26",
+        "operation": "addition",
+        "a": 10.0,
+        "b": 20.0,
+        "result": 30.0,
+        "status": "success"
+    },
+    {
+        "timestamp": "2026-01-29 11:44:11",
+        "operation": "division",
+        "a": 10.0,
+        "b": 0.0,
+        "result": null,
+        "status": "failed"
+    }
+]
